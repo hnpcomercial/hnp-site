@@ -25,13 +25,10 @@ mkdir -p "$ASSETS"
 mkdir -p "$LOGOS"
 
 echo "==> Baixando logos das marcas..."
+echo "    (Kofisa já está em assets/brands/kofisa.png — fornecida pela fábrica)"
 curl -fsSL -o "$LOGOS/logo-sulfisa.png" \
   "https://lp.sulfisa.com/wp-content/uploads/2025/08/Group-4.png"
 echo "    ✓ $LOGOS/logo-sulfisa.png"
-
-curl -fsSL -o "$LOGOS/logo-kofisa.png" \
-  "https://kofisa.com.br/wp-content/uploads/2023/01/KFS_logo1.png"
-echo "    ✓ $LOGOS/logo-kofisa.png"
 
 echo ""
 echo "==> Baixando fotos de produtos Sulfisa..."
