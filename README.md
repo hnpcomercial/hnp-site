@@ -46,27 +46,41 @@ delegue para ninguém — essa é a sua identidade digital.
 6. (Opcional mas recomendado) Ative autenticação em dois fatores em
    Settings → Password and authentication → Two-factor authentication
 
-## Etapa 2 — Preparar as imagens das marcas
+## Etapa 2 — Baixar e auto-hospedar as imagens das marcas (⚠️ NÃO PULE)
 
-As imagens já estão referenciadas no `index.html`, mas vêm dos servidores
-das fábricas (Sulfisa e Kofisa). Para produção, é boa prática auto-hospedar
-para garantir confiabilidade.
+⚠️ **Etapa crítica.** O site ainda referencia **14 imagens** dos servidores
+Sulfisa e Kofisa via hotlink (1 logo + 5 produtos Sulfisa + 8 produtos
+Kofisa). Se essas fábricas reorganizarem o servidor ou ativarem proteção
+anti-hotlink, as imagens somem do seu site. Vamos eliminar essa dependência
+com **dois comandos**.
 
 **No seu computador**, abra um terminal na pasta do projeto e execute:
 
 ```bash
 chmod +x download-assets.sh use-local-assets.sh
-./download-assets.sh        # baixa todas as imagens para assets/
-./use-local-assets.sh       # atualiza index.html para usar imagens locais
+./download-assets.sh
+./use-local-assets.sh
 ```
 
-> **Windows sem terminal Bash?** Use o **Git Bash** (instalado junto com o
-> Git — veja Etapa 3) ou o **WSL**. Como alternativa, baixe as imagens
-> manualmente seguindo as URLs no `download-assets.sh` e substitua as URLs
-> no `index.html`.
+O que cada script faz:
 
-Se preferir pular essa etapa (não recomendado para produção), o site
-funciona normalmente carregando as imagens dos servidores das fábricas.
+- **`download-assets.sh`** baixa as 14 imagens para `assets/brands/` (logo Sulfisa) e `assets/produtos/` (todas as fotos de produto). Mostra progresso visual e contagem de sucessos/falhas.
+- **`use-local-assets.sh`** substitui as 14 URLs no `index.html` pelos caminhos locais correspondentes. Faz backup automático em `index.html.backup`. No final, verifica e confirma "Zero hotlinks restantes".
+
+**Como rodar em cada sistema operacional:**
+
+- **macOS:** abra o app **Terminal**, navegue até a pasta com `cd /caminho/para/hnp-site/`, e cole os 3 comandos acima
+- **Windows:** clique com botão direito na pasta `hnp-site` no Explorer → "Git Bash Here" (instalado junto com o Git) → cole os 3 comandos acima
+- **Linux:** Terminal padrão, mesmos comandos
+
+**Tempo total: 30 segundos** (depende da sua internet).
+
+Depois de rodar, faça commit no GitHub Desktop e push. Pronto — seu site é
+100% auto-hospedado, sem nenhuma dependência externa exceto fonts do Google.
+
+**Direito de uso:** como representante oficial das marcas, você tem
+autorização para utilizar materiais institucionais das fábricas. Boa
+prática: comunicar Sulfisa e Kofisa que o site fará uso desses ativos.
 
 ## Etapa 3 — Instalar o Git (se ainda não tiver)
 
