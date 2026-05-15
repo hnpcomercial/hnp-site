@@ -11,6 +11,13 @@
 <meta property="og:description" content="Equipamentos para cozinhas profissionais. Representação oficial Sulfisa e Kofisa." />
 <meta property="og:url" content="https://hnpcomercial.com.br/" />
 <meta property="og:type" content="website" />
+<meta property="og:image" content="https://hnpcomercial.com.br/assets/logo/png/hnp-avatar-cream-1024.png" />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,18 +115,13 @@ nav.top .wrap {
   height: 68px;
 }
 .logomark {
-  display: flex; align-items: center; gap: 12px;
-  font-family: var(--serif);
-  font-size: 22px;
-  letter-spacing: -0.02em;
-  font-style: italic;
+  display: flex; align-items: center; gap: 0;
+  height: 40px;
 }
-.logomark .mark {
-  width: 28px; height: 28px;
-  background: var(--ink); color: var(--bg);
-  display: grid; place-items: center;
-  font-family: var(--sans); font-weight: 700; font-size: 12px;
-  letter-spacing: 0;
+.logomark img {
+  height: 100%;
+  width: auto;
+  display: block;
 }
 .nav-links { display: flex; gap: 34px; align-items: center; }
 .nav-links a {
@@ -1123,25 +1125,14 @@ footer.site .col a {
 }
 footer.site .col a:hover { color: var(--accent-soft); }
 footer.site .brandline {
-  display: flex; align-items: center; gap: 14px;
-  font-family: var(--serif);
-  font-size: 28px;
-  font-style: italic;
-  letter-spacing: -0.02em;
-  font-variation-settings: "SOFT" 60, "opsz" 48, "wght" 380;
-  margin-bottom: 14px;
-  color: var(--bg);
+  display: flex; align-items: center;
+  margin-bottom: 18px;
+  height: 64px;
 }
-footer.site .brandline .mark {
-  width: 32px; height: 32px;
-  background: var(--accent);
-  color: var(--ink);
-  display: grid; place-items: center;
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0;
-  font-style: normal;
+footer.site .brandline img {
+  height: 100%;
+  width: auto;
+  display: block;
 }
 footer.site .legal {
   margin-top: 50px;
@@ -1181,9 +1172,8 @@ footer.site .legal {
 <!-- ============================ NAV ============================ -->
 <nav class="top">
   <div class="wrap">
-    <a href="#" class="logomark">
-      <span class="mark">H</span>
-      <span>HNP <em>&nbsp;Representação</em></span>
+    <a href="#" class="logomark" aria-label="HNP Representação Comercial - voltar ao topo">
+      <img src="assets/logo/svg/hnp-logo-mark-dark.svg" alt="HNP Representação Comercial" />
     </a>
     <div class="nav-links">
       <a href="#manifesto">Manifesto</a>
@@ -1865,8 +1855,7 @@ footer.site .legal {
   <div class="wrap">
     <div class="col">
       <div class="brandline">
-        <span class="mark">H</span>
-        <span>HNP Representação Comercial</span>
+        <img src="assets/logo/svg/hnp-logo-mark-light.svg" alt="HNP Representação Comercial" />
       </div>
       <p>Equipamentos para cozinhas profissionais.</p>
       <p>Representação oficial Sulfisa &amp; Kofisa.</p>
@@ -1880,6 +1869,8 @@ footer.site .legal {
       <a href="#equipamentos">Linhas de Equipamentos</a>
       <a href="#segmentos">Segmentos Atendidos</a>
       <a href="#contato">Contato</a>
+      <br/>
+      <a href="brand-manual.html" target="_blank">Manual da marca ↗</a>
     </div>
     <div class="col">
       <h4>Contato Direto</h4>

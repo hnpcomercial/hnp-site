@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HNP Representação Comercial — Brand Manual</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #EFE7D9;
+  --bg-soft: #F7F1E5;
+  --bg-deep: #E5DCC9;
+  --ink: #14110D;
+  --ink-soft: #3A332B;
+  --steel: #8A8278;
+  --steel-soft: #C7BFB3;
+  --accent: #C2521E;
+  --accent-deep: #8D3811;
+  --accent-soft: #E08A5B;
+  --rule: rgba(20, 17, 13, 0.14);
+  --rule-strong: rgba(20, 17, 13, 0.35);
+
+  --serif: 'Fraunces', serif;
+  --sans:  'Manrope', system-ui, sans-serif;
+  --mono:  'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 16px;
+  background-image: radial-gradient(circle at 1px 1px, rgba(20,17,13,0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 80px 60px;
+}
+
+/* ============== COVER ============== */
+.cover {
+  min-height: 90vh;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--ink);
+  margin-bottom: 80px;
+}
+.cover-top {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.cover-top .dot { color: var(--accent); }
+.cover-main h1 {
+  font-family: var(--serif);
+  font-size: clamp(64px, 9vw, 140px);
+  font-variation-settings: "SOFT" 30, "opsz" 144, "wght" 360;
+  letter-spacing: -0.05em;
+  line-height: 0.88;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.cover-main h1 em {
+  font-style: italic;
+  font-variation-settings: "SOFT" 90, "opsz" 144, "wght" 320;
+  color: var(--accent);
+}
+.cover-main p {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-style: italic;
+  font-variation-settings: "SOFT" 80, "opsz" 36, "wght" 380;
+  letter-spacing: -0.005em;
+  color: var(--ink-soft);
+  max-width: 50ch;
+}
+.cover-foot {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-top: 80px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+/* ============== SECTIONS ============== */
+.section {
+  padding: 60px 0 80px;
+  border-top: 1px solid var(--rule);
+}
+.section:first-of-type { border-top: 0; }
+
+.section-label {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+  align-items: baseline;
+}
+.section-label .num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+}
+.section-label h2 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 56px);
+  font-variation-settings: "SOFT" 30, "opsz" 96, "wght" 360;
+  letter-spacing: -0.025em;
+  line-height: 1.0;
+}
+.section-label h2 em {
+  font-style: italic;
+  color: var(--accent);
+  font-variation-settings: "SOFT" 80, "opsz" 96, "wght" 320;
+}
+
+.body p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.75;
+  margin-bottom: 16px;
+  max-width: 62ch;
+}
+.body p strong { color: var(--ink); font-weight: 600; }
+.body ul {
+  list-style: none;
+  margin: 16px 0;
+  padding-left: 0;
+}
+.body ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+.body ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.body h3 {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-variation-settings: "SOFT" 30, "opsz" 48, "wght" 400;
+  letter-spacing: -0.015em;
+  margin: 36px 0 14px;
+  color: var(--ink);
+}
+.body h4 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 24px 0 12px;
+}
+
+/* ============== LOGO DISPLAY ============== */
+.logo-display {
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 50px 30px;
+  margin: 20px 0;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 280px;
+  position: relative;
+}
+.logo-display.dk {
+  background: var(--ink);
+}
+.logo-display.dk-bordered {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.logo-display img {
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+}
+.logo-display .caption {
+  position: absolute;
+  top: 14px; left: 18px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+.logo-display.dk .caption { color: var(--steel-soft); opacity: 0.5; }
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+@media (max-width: 720px) {
+  .logo-grid { grid-template-columns: 1fr; }
+}
+
+/* ============== CLEAR SPACE ============== */
+.clearspace {
+  position: relative;
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 80px 60px;
+  margin: 20px 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.clearspace::before,
+.clearspace::after {
+  content: "";
+  position: absolute;
+  border: 1px dashed var(--accent);
+  pointer-events: none;
+}
+.clearspace::before {
+  top: 50px; left: 30px; right: 30px; bottom: 50px;
+}
+.clearspace .x-label {
+  position: absolute;
+  top: 24px; left: 24px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+
+/* ============== COLOR PALETTE ============== */
+.colors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 24px 0 40px;
+}
+@media (max-width: 720px) { .colors { grid-template-columns: 1fr; } }
+
+.color-card {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+}
+.color-card .swatch {
+  height: 140px;
+  position: relative;
+}
+.color-card .swatch .name {
+  position: absolute;
+  bottom: 14px; left: 14px;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-variation-settings: "SOFT" 30, "opsz" 36, "wght" 400;
+  letter-spacing: -0.015em;
+}
+.color-card .swatch.lt .name { color: var(--ink); }
+.color-card .swatch.dk .name { color: var(--bg); }
+.color-card .info {
+  padding: 14px 16px 16px;
+  display: flex; flex-direction: column; gap: 4px;
+  background: white;
+}
+.color-card .info .row {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+}
+.color-card .info .row .k { color: var(--steel); }
+.color-card .info .role {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* ============== TYPOGRAPHY ============== */
+.type-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 36px 32px;
+  margin: 16px 0;
+}
+.type-card .role {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.type-card .name {
+  font-size: 64px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 18px;
+}
+.type-card .specimen {
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+.type-card .glyphs {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  word-break: break-all;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+.type-card.fraunces .name,
+.type-card.fraunces .specimen { font-family: var(--serif); }
+.type-card.fraunces .name {
+  font-variation-settings: "SOFT" 30, "opsz" 96, "wght" 400;
+}
+.type-card.fraunces .specimen {
+  font-variation-settings: "SOFT" 60, "opsz" 36, "wght" 380;
+  font-style: italic;
+}
+.type-card.manrope .name,
+.type-card.manrope .specimen { font-family: var(--sans); }
+.type-card.manrope .name { font-weight: 800; }
+.type-card.manrope .specimen { font-weight: 500; }
+.type-card.mono .name,
+.type-card.mono .specimen { font-family: var(--mono); }
+.type-card.mono .name { font-weight: 500; }
+.type-card.mono .specimen { font-size: 22px; }
+
+/* ============== DOS AND DONTS ============== */
+.dos-donts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+@media (max-width: 720px) { .dos-donts { grid-template-columns: 1fr; } }
+
+.rule-card {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+.rule-card .head {
+  padding: 12px 18px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: flex; align-items: center; gap: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+.rule-card .head .badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 9px;
+}
+.rule-card.do .head .badge {
+  background: var(--ink); color: var(--bg);
+}
+.rule-card.dont .head .badge {
+  background: var(--accent); color: var(--bg);
+}
+.rule-card .vis {
+  padding: 40px 24px;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 180px;
+  background: var(--bg);
+}
+.rule-card .desc {
+  padding: 14px 18px 16px;
+  border-top: 1px solid var(--rule);
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+/* ============== TABLES ============== */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+.spec-table th, .spec-table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--rule);
+}
+.spec-table th {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--steel);
+  font-weight: 500;
+}
+.spec-table td.mono { font-family: var(--mono); font-size: 12px; }
+
+/* ============== APPLICATIONS ============== */
+.apps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+@media (max-width: 720px) { .apps-grid { grid-template-columns: 1fr; } }
+
+.app-card {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+.app-card .canvas {
+  aspect-ratio: 7 / 4;
+  padding: 30px;
+  display: flex;
+  background: var(--bg);
+  position: relative;
+}
+.app-card .canvas.dk { background: var(--ink); color: var(--bg); }
+.app-card .label {
+  padding: 12px 16px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--rule);
+}
+
+/* Business card mockup */
+.bizcard {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+}
+.bizcard.dk { color: var(--bg); }
+.bizcard img { max-height: 36px; width: auto; }
+.bizcard .name {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-variation-settings: "SOFT" 30, "opsz" 36, "wght" 420;
+  letter-spacing: -0.01em;
+}
+.bizcard .name .role {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: block;
+  margin-top: 6px;
+  color: var(--accent);
+  font-style: normal;
+}
+.bizcard .contact {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.bizcard.dk .contact { color: rgba(239,231,217,0.7); }
+
+/* ============== FOOTER ============== */
+.manual-foot {
+  border-top: 1px solid var(--ink);
+  padding-top: 30px;
+  margin-top: 60px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  color: var(--ink-soft);
+}
+
+/* PRINT */
+@media print {
+  body { background: white; background-image: none; }
+  .section { page-break-inside: avoid; }
+  .cover { page-break-after: always; min-height: 95vh; }
+  .section { page-break-before: auto; padding: 30px 0; }
+  .logo-display, .clearspace, .color-card, .type-card, .rule-card { page-break-inside: avoid; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ============================ COVER ============================ -->
+  <header class="cover">
+    <div class="cover-top">
+      <span><span class="dot">●</span> HNP — Brand Manual</span>
+      <span>v1.0 · 2026</span>
+    </div>
+    <div class="cover-main">
+      <h1>Manual de<br/>identidade <em>visual.</em></h1>
+      <p>
+        Diretrizes oficiais para uso da marca HNP Representação
+        Comercial: logo, cores, tipografia, aplicações e regras de
+        consistência.
+      </p>
+    </div>
+    <div class="cover-foot">
+      <span>HNP Representação Comercial</span>
+      <span>São Paulo · Brasil · hnpcomercial.com.br</span>
+    </div>
+  </header>
+
+  <!-- ============================ 01 — MARCA ============================ -->
+  <section class="section">
+    <div class="section-label">
+      <span class="num">01</span>
+      <h2>A <em>marca.</em></h2>
+    </div>
+    <div class="body">
+      <p>
+        A marca HNP Representação Comercial é um sistema visual construído
+        sobre três pilares: <strong>precisão técnica, herança editorial e
+        identidade industrial</strong>. O logo combina três blocos contendo
+        as iniciais H, N, P em serifa contrastada (Fraunces), com o N
+        destacado em cobre queimado &mdash; uma referência direta ao calor
+        controlado das cozinhas profissionais que a HNP equipa.
+      </p>
+      <p>
+        Os blocos individuais remetem a placas de equipamento, etiquetas
+        industriais e selos de qualidade. A tipografia serif transmite o peso
+        de mais de três décadas de experiência do sócio-fundador no segmento.
+        O ponto cobre à direita funciona como uma marcação tipográfica
+        deliberada, um "ponto final" gráfico.
+      </p>
+
+      <h3>Versão principal</h3>
+      <div class="logo-display">
+        <span class="caption">PRINCIPAL · DARK</span>
+        <img src="../png/hnp-logo-full-dark-1024w.png" alt="HNP Logo Principal" />
+      </div>
+      <p>
+        Esta é a aplicação primária da marca. Use sempre que houver espaço
+        suficiente para que o descritor "Representação Comercial" seja
+        legível (mínimo de 40&nbsp;mm de largura na impressão,
+        180&nbsp;px na tela).
+      </p>
+
+      <h3>Variantes por contexto</h3>
+      <div class="logo-grid">
+        <div class="logo-display">
+          <span class="caption">LOGO COMPLETO · CLARO</span>
+          <img src="../png/hnp-logo-full-dark-512w.png" alt="HNP Logo Completo Claro" />
+        </div>
+        <div class="logo-display dk">
+          <span class="caption">LOGO COMPLETO · ESCURO</span>
+          <img src="../png/hnp-logo-full-light-512w.png" alt="HNP Logo Completo Escuro" />
+        </div>
+        <div class="logo-display">
+          <span class="caption">MARCA · CLARO</span>
+          <img src="../png/hnp-logo-mark-dark-512w.png" alt="HNP Marca Claro" />
+        </div>
+        <div class="logo-display dk">
+          <span class="caption">MARCA · ESCURO</span>
+          <img src="../png/hnp-logo-mark-light-512w.png" alt="HNP Marca Escuro" />
+        </div>
+      </div>
+      <p>
+        A <strong>marca completa</strong> (com descritor) é a aplicação
+        primária. A <strong>marca reduzida</strong> (sem descritor) deve
+        ser usada em espaços compactos: ícones de aplicativo, avatares de
+        rede social, favicon do site, ou qualquer composição onde a marca
+        completa ficaria abaixo do tamanho mínimo legível.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================ 02 — ÁREA DE PROTEÇÃO ============================ -->
+  <section class="section">
+    <div class="section-label">
+      <span class="num">02</span>
+      <h2>Área de <em>proteção</em>.</h2>
+    </div>
+    <div class="body">
+      <p>
+        A marca deve sempre respeitar uma área mínima de respiro &mdash;
+        nenhum outro elemento gráfico, texto ou imagem pode invadir essa
+        zona. A unidade de medida (<span style="font-family:var(--mono); color:var(--accent)">X</span>)
+        equivale à altura de um dos blocos H/N/P do logo.
+      </p>
+
+      <div class="clearspace">
+        <span class="x-label">X = altura do bloco</span>
+        <img src="../png/hnp-logo-full-dark-512w.png" alt="Área de proteção" style="max-height: 180px;" />
+      </div>
+
+      <h3>Tamanhos mínimos</h3>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Aplicação</th><th>Marca completa</th><th>Marca reduzida</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Tela (digital)</td><td class="mono">180 px de largura</td><td class="mono">96 px de largura</td></tr>
+          <tr><td>Impressão</td><td class="mono">40 mm de largura</td><td class="mono">22 mm de largura</td></tr>
+          <tr><td>Bordado / serigrafia</td><td class="mono">não aplicável</td><td class="mono">35 mm de largura</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============================ 03 — REGRAS ============================ -->
+  <section class="section">
+    <div class="section-label">
+      <span class="num">03</span>
+      <h2>O que <em>fazer</em> e o que evitar.</h2>
+    </div>
+    <div class="body">
+      <p>
+        Para que a marca mantenha consistência e força em qualquer aplicação,
+        algumas regras simples devem ser respeitadas.
+      </p>
+
+      <div class="dos-donts">
+        <div class="rule-card do">
+          <div class="head">
+            <span class="badge">FAÇA</span>
+            <span>Mantenha proporções originais</span>
+          </div>
+          <div class="vis">
+            <img src="../png/hnp-logo-full-dark-512w.png" alt="OK" style="max-height: 110px;" />
+          </div>
+          <div class="desc">Sempre redimensione mantendo a proporção exata do arquivo original.</div>
+        </div>
+        <div class="rule-card dont">
+          <div class="head">
+            <span class="badge">EVITE</span>
+            <span>Não distorça</span>
+          </div>
+          <div class="vis">
+            <img src="../png/hnp-logo-full-dark-512w.png" alt="X" style="max-height: 110px; transform: scaleX(1.4);" />
+          </div>
+          <div class="desc">Nunca estique, comprima, esmague ou aplique transformações não-uniformes ao logo.</div>
+        </div>
+        <div class="rule-card do">
+          <div class="head">
+            <span class="badge">FAÇA</span>
+            <span>Use as cores oficiais</span>
+          </div>
+          <div class="vis">
+            <img src="../png/hnp-logo-full-dark-512w.png" alt="OK" style="max-height: 110px;" />
+          </div>
+          <div class="desc">Aplique somente as cores definidas neste manual (cream, ink, cobre) ou as variantes monocromáticas.</div>
+        </div>
+        <div class="rule-card dont">
+          <div class="head">
+            <span class="badge">EVITE</span>
+            <span>Não recolora</span>
+          </div>
+          <div class="vis" style="background: #2D5F8D;">
+            <img src="../png/hnp-logo-full-light-512w.png" alt="X" style="max-height: 110px;" />
+          </div>
+          <div class="desc">Não substitua o cobre por outras cores. O cobre queimado é uma assinatura da marca.</div>
+        </div>
+        <div class="rule-card do">
+          <div class="head">
+            <span class="badge">FAÇA</span>
+            <span>Garanta contraste</span>
+          </div>
+          <div class="vis">
+            <img src="../png/hnp-logo-full-dark-512w.png" alt="OK" style="max-height: 110px;" />
+          </div>
+          <div class="desc">Em fundos claros, use a variante escura. Em fundos escuros, use a variante clara. Sempre garantir leitura clara do descritor.</div>
+        </div>
+        <div class="rule-card dont">
+          <div class="head">
+            <span class="badge">EVITE</span>
+            <span>Não use sobre fundos ruidosos</span>
+          </div>
+          <div class="vis" style="background: linear-gradient(45deg, #C2521E, #2D5F8D, #14110D); background-size: 200% 200%;">
+            <img src="../png/hnp-logo-full-light-512w.png" alt="X" style="max-height: 110px;" />
+          </div>
+          <div class="desc">Evite aplicar a marca diretamente sobre fotos complexas, gradientes ou padrões que prejudiquem a legibilidade.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ 04 — CORES ============================ -->
+  <section class="section">
+    <div class="section-label">
+      <span class="num">04</span>
+      <h2>Paleta de <em>cores.</em></h2>
+    </div>
+    <div class="body">
+      <p>
+        A paleta da HNP é composta por três cores primárias e duas
+        secundárias. As três primárias &mdash; <strong>cream parchment,
+        deep ink e cobre queimado</strong> &mdash; constituem a assinatura
+        cromática da marca e devem dominar 90% das aplicações.
+      </p>
+
+      <h4>Cores primárias</h4>
+      <div class="colors">
+        <div class="color-card">
+          <div class="swatch lt" style="background: #EFE7D9;">
+            <span class="name">Cream</span>
+          </div>
+          <div class="info">
+            <span class="role">PRIMÁRIA · FUNDO</span>
+            <div class="row"><span class="k">HEX</span><span>#EFE7D9</span></div>
+            <div class="row"><span class="k">RGB</span><span>239 · 231 · 217</span></div>
+            <div class="row"><span class="k">CMYK</span><span>4 · 6 · 13 · 0</span></div>
+            <div class="row"><span class="k">PANTONE</span><span>Warm Grey 1 C</span></div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="swatch dk" style="background: #14110D;">
+            <span class="name">Ink</span>
+          </div>
+          <div class="info">
+            <span class="role">PRIMÁRIA · TEXTO</span>
+            <div class="row"><span class="k">HEX</span><span>#14110D</span></div>
+            <div class="row"><span class="k">RGB</span><span>20 · 17 · 13</span></div>
+            <div class="row"><span class="k">CMYK</span><span>0 · 15 · 35 · 92</span></div>
+            <div class="row"><span class="k">PANTONE</span><span>Black 6 C</span></div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="swatch dk" style="background: #C2521E;">
+            <span class="name" style="color: #EFE7D9;">Copper</span>
+          </div>
+          <div class="info">
+            <span class="role">PRIMÁRIA · ACCENT</span>
+            <div class="row"><span class="k">HEX</span><span>#C2521E</span></div>
+            <div class="row"><span class="k">RGB</span><span>194 · 82 · 30</span></div>
+            <div class="row"><span class="k">CMYK</span><span>16 · 78 · 100 · 5</span></div>
+            <div class="row"><span class="k">PANTONE</span><span>173 C</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h4>Cores secundárias</h4>
+      <div class="colors" style="grid-template-columns: 1fr 1fr;">
+        <div class="color-card">
+          <div class="swatch dk" style="background: #E08A5B;">
+            <span class="name" style="color: #14110D;">Copper Soft</span>
+          </div>
+          <div class="info">
+            <span class="role">SECUNDÁRIA · ACCENT CLARO</span>
+            <div class="row"><span class="k">HEX</span><span>#E08A5B</span></div>
+            <div class="row"><span class="k">RGB</span><span>224 · 138 · 91</span></div>
+            <div class="row"><span class="k">USO</span><span>realces sutis em fundos escuros</span></div>
+          </div>
+        </div>
+        <div class="color-card">
+          <div class="swatch dk" style="background: #8A8278;">
+            <span class="name" style="color: #EFE7D9;">Steel</span>
+          </div>
+          <div class="info">
+            <span class="role">SECUNDÁRIA · NEUTRO</span>
+            <div class="row"><span class="k">HEX</span><span>#8A8278</span></div>
+            <div class="row"><span class="k">RGB</span><span>138 · 130 · 120</span></div>
+            <div class="row"><span class="k">USO</span><span>textos secundários, labels, regras</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ 05 — TIPOGRAFIA ============================ -->
+  <section class="section">
+    <div class="section-label">
+      <span class="num">05</span>
+      <h2>Sistema <em>tipográfico.</em></h2>
+    </div>
+    <div class="body">
+      <p>
+        A HNP utiliza três famílias tipográficas, cada uma com função
+        específica. As três são <strong>open-source</strong> e disponíveis
+        gratuitamente via Google Fonts.
+      </p>
+
+      <div class="type-card fraunces">
+        <span class="role">DISPLAY · TÍTULOS &amp; LOGO</span>
+        <div class="name">Fraunces</div>
+        <div class="specimen">Equipar uma cozinha profissional é, antes de tudo, um ato de precisão.</div>
+        <div class="glyphs">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 áàâãäéèêëíìîïóòôõöúùûüç</div>
+      </div>
+      <p style="font-size: 14px; color: var(--ink-soft); margin-bottom: 30px;">
+        Serifa contrastada de origem editorial. Usada em manchetes, citações,
+        nomes próprios em destaque, e nas iniciais H/N/P do logotipo. Pesos
+        recomendados: 350-400 (Regular), 600 (SemiBold).
+      </p>
+
+      <div class="type-card manrope">
+        <span class="role">TEXTO · CORPO E INTERFACE</span>
+        <div class="name">Manrope</div>
+        <div class="specimen">Soluções completas em equipamentos para cozinhas industriais — do projeto à entrega final.</div>
+        <div class="glyphs">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 áàâãäéèêëíìîïóòôõöúùûüç</div>
+      </div>
+      <p style="font-size: 14px; color: var(--ink-soft); margin-bottom: 30px;">
+        Sans-serif contemporâneo, geométrico e legível em qualquer tamanho.
+        Usado para corpo de texto, navegação e elementos de interface. Pesos
+        recomendados: 400 (Regular), 500 (Medium), 800 (ExtraBold).
+      </p>
+
+      <div class="type-card mono">
+        <span class="role">TÉCNICO · LABELS, CÓDIGOS, DESCRITOR</span>
+        <div class="name">JetBrains Mono</div>
+        <div class="specimen">REPRESENTAÇÃO COMERCIAL · SP · BR</div>
+        <div class="glyphs">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 áàâãéèêíîóôõúûç</div>
+      </div>
+      <p style="font-size: 14px; color: var(--ink-soft);">
+        Mono-spaced de origem técnica. Usado em rótulos pequenos,
+        especificações, números de seção e no descritor "Representação
+        Comercial" do logo. Sempre em CAIXA-ALTA com letter-spacing de 0.18em
+        a 0.32em. Peso recomendado: 500 (Medium).
+      </p>
+
+      <h4 style="margin-top: 36px;">Escala tipográfica</h4>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Função</th><th>Fonte</th><th>Tamanho</th><th>Letter-spacing</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Manchete display</td><td class="mono">Fraunces</td><td class="mono">96-220 px</td><td class="mono">-0.045em</td></tr>
+          <tr><td>Manchete H2</td><td class="mono">Fraunces</td><td class="mono">40-72 px</td><td class="mono">-0.025em</td></tr>
+          <tr><td>Subtítulo H3</td><td class="mono">Fraunces</td><td class="mono">22-32 px</td><td class="mono">-0.015em</td></tr>
+          <tr><td>Corpo de texto</td><td class="mono">Manrope 400</td><td class="mono">15-16 px</td><td class="mono">0</td></tr>
+          <tr><td>Label / eyebrow</td><td class="mono">JetBrains 500</td><td class="mono">10-12 px</td><td class="mono">0.18-0.22em</td></tr>
+          <tr><td>Descritor do logo</td><td class="mono">JetBrains 500</td><td class="mono">conforme escala</td><td class="mono">0.32em</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============================ 06 — APLICAÇÕES ============================ -->
+  <section class="section">
+    <div class="section-label">
+      <span class="num">06</span>
+      <h2>Aplicações <em>de referência.</em></h2>
+    </div>
+    <div class="body">
+      <p>
+        Exemplos canônicos de aplicação da marca em peças comuns. Use estes
+        layouts como ponto de partida; adapte as proporções mantendo as
+        regras de área de proteção, cor e tipografia.
+      </p>
+
+      <h3>Cartão de visita</h3>
+      <div class="apps-grid">
+        <div class="app-card">
+          <div class="canvas">
+            <div class="bizcard">
+              <img src="../png/hnp-logo-mark-dark-256w.png" alt="HNP" />
+              <div class="name">Hamilton Nonato Pinto<span class="role">Sócio-Fundador</span></div>
+              <div class="contact">
+                +55 (11) 94760&ndash;9085<br/>
+                contato@hnpcomercial.com.br<br/>
+                hnpcomercial.com.br
+              </div>
+            </div>
+          </div>
+          <div class="label">FRENTE · CREAM</div>
+        </div>
+        <div class="app-card">
+          <div class="canvas dk">
+            <div class="bizcard dk">
+              <img src="../png/hnp-logo-mark-light-256w.png" alt="HNP" />
+              <div class="name" style="color: var(--bg);">Representação<br/>oficial<span class="role">Sulfisa · Kofisa</span></div>
+              <div class="contact">
+                São Paulo · Brasil
+              </div>
+            </div>
+          </div>
+          <div class="label">VERSO · INK</div>
+        </div>
+      </div>
+
+      <h3>Avatar de rede social</h3>
+      <div class="apps-grid">
+        <div class="app-card">
+          <div class="canvas" style="background: var(--bg); padding: 30px; display: grid; place-items: center;">
+            <img src="../png/hnp-avatar-cream-512.png" alt="Avatar cream" style="width: 180px; height: 180px; border-radius: 50%;" />
+          </div>
+          <div class="label">AVATAR · CREAM (LINKEDIN, INSTAGRAM)</div>
+        </div>
+        <div class="app-card">
+          <div class="canvas dk" style="padding: 30px; display: grid; place-items: center;">
+            <img src="../png/hnp-avatar-ink-512.png" alt="Avatar ink" style="width: 180px; height: 180px; border-radius: 50%;" />
+          </div>
+          <div class="label">AVATAR · INK (X, GITHUB)</div>
+        </div>
+      </div>
+
+      <h3>Assinatura de e-mail</h3>
+      <div class="app-card">
+        <div class="canvas" style="display: block; padding: 40px;">
+          <table style="border-collapse: collapse;">
+            <tr>
+              <td style="padding-right: 24px; border-right: 1px solid var(--rule); vertical-align: top;">
+                <img src="../png/hnp-logo-mark-dark-256w.png" alt="HNP" style="height: 60px; width: auto;" />
+              </td>
+              <td style="padding-left: 24px; font-family: var(--sans); font-size: 13px; color: var(--ink-soft); line-height: 1.65; vertical-align: top;">
+                <strong style="color: var(--ink); font-family: var(--serif); font-size: 16px; font-variation-settings: 'opsz' 24, 'wght' 420;">Hamilton Nonato Pinto</strong><br/>
+                <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent);">Sócio-Fundador</span><br/>
+                <br/>
+                <strong style="color: var(--ink);">HNP Representação Comercial</strong><br/>
+                <span style="font-family: var(--mono); font-size: 11px;">+55 (11) 94760&ndash;9085</span><br/>
+                contato@hnpcomercial.com.br<br/>
+                hnpcomercial.com.br
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="label">ASSINATURA DE E-MAIL · HTML</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ 07 — ARQUIVOS ============================ -->
+  <section class="section">
+    <div class="section-label">
+      <span class="num">07</span>
+      <h2>Arquivos <em>oficiais.</em></h2>
+    </div>
+    <div class="body">
+      <p>
+        Os arquivos vetoriais (SVG) são os mestres da marca &mdash; use-os
+        sempre que possível. Os PNGs estão disponíveis em múltiplos tamanhos
+        para uso digital quando o SVG não for suportado.
+      </p>
+
+      <h3>Estrutura dos arquivos</h3>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Arquivo</th><th>Formato</th><th>Uso recomendado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">hnp-logo-full-dark.svg</td><td class="mono">SVG</td><td>Mestre · fundo claro</td></tr>
+          <tr><td class="mono">hnp-logo-full-light.svg</td><td class="mono">SVG</td><td>Mestre · fundo escuro</td></tr>
+          <tr><td class="mono">hnp-logo-mark-dark.svg</td><td class="mono">SVG</td><td>Reduzido · fundo claro</td></tr>
+          <tr><td class="mono">hnp-logo-mark-light.svg</td><td class="mono">SVG</td><td>Reduzido · fundo escuro</td></tr>
+          <tr><td class="mono">hnp-logo-full-mono-*.svg</td><td class="mono">SVG</td><td>Monocromático · uma cor</td></tr>
+          <tr><td class="mono">hnp-logo-*-{256,512,1024,2048}w.png</td><td class="mono">PNG</td><td>Múltiplos tamanhos · fundo transparente</td></tr>
+          <tr><td class="mono">hnp-avatar-{cream,ink}-{512,1024}.png</td><td class="mono">PNG</td><td>Avatares · fundo sólido</td></tr>
+          <tr><td class="mono">hnp-favicon-{32,64,192,512}.png</td><td class="mono">PNG</td><td>Favicon · web</td></tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 24px;">
+        <strong>Observação importante.</strong> Os arquivos SVG têm todas as
+        formas tipográficas convertidas em paths vetoriais (não dependem da
+        fonte Fraunces ou JetBrains Mono estar instalada para serem
+        renderizados corretamente). Já o site institucional usa as fontes
+        carregadas via Google Fonts.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================ FOOT ============================ -->
+  <footer class="manual-foot">
+    <span>HNP Representação Comercial · Brand Manual v1.0</span>
+    <span>2026 · hnpcomercial.com.br · +55 (11) 94760-9085</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
