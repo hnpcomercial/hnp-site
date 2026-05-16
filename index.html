@@ -208,9 +208,15 @@ nav.top .wrap {
   gap: 60px;
   align-items: center;
   background: var(--accent);
-  border-radius: 6px;
-  padding: 36px 44px;
   color: var(--bg);
+  /* Full-bleed: escape .wrap max-width + gutter */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: max(var(--gutter), calc((100vw - var(--max-w)) / 2 + var(--gutter)));
+  padding-right: max(var(--gutter), calc((100vw - var(--max-w)) / 2 + var(--gutter)));
 }
 .hero-id .hero-logo {
   margin-top: 0;
@@ -240,7 +246,7 @@ nav.top .wrap {
   font-variation-settings: "SOFT" 30, "opsz" 24, "wght" 600;
 }
 @media (max-width: 820px) {
-  .hero-id { grid-template-columns: 1fr; gap: 24px; padding: 28px 26px; }
+  .hero-id { grid-template-columns: 1fr; gap: 24px; padding-top: 32px; padding-bottom: 32px; }
 }
 .hero-sub {
   display: grid;
@@ -293,8 +299,8 @@ nav.top .wrap {
   border-top: 1px solid var(--rule);
   padding: 22px 0 6px;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
-  gap: 40px;
+  grid-template-columns: auto auto 1fr;
+  gap: 28px;
   align-items: center;
 }
 .rep-badge .lbl {
@@ -449,7 +455,16 @@ nav.top .wrap {
   color: var(--steel);
 }
 @media (max-width: 820px) {
-  .manifesto .wrap { grid-template-columns: 1fr; gap: 30px; }
+  .manifesto .wrap,
+  .founder .wrap,
+  .brands .wrap,
+  .equipment .wrap,
+  .segments .wrap,
+  .diff .wrap,
+  .contact .wrap {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
   .section-label { position: static; }
   .manifesto-body { grid-template-columns: 1fr; gap: 24px; }
   .numbers { grid-template-columns: repeat(2, 1fr); }
@@ -1200,25 +1215,29 @@ nav.top .wrap {
 }
 a.contact-item:hover .val { color: var(--accent); }
 
-.whatsapp-cta {
+.contact-ctas {
   margin-top: 50px;
-  display: inline-flex; align-items: center; gap: 14px;
+  display: flex; flex-wrap: wrap; gap: 14px;
+}
+.contact-cta {
+  display: inline-flex; align-items: center; gap: 12px;
   padding: 18px 32px;
-  background: var(--ink);
-  color: var(--bg);
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   border-radius: 999px;
   transition: all .3s ease;
+  white-space: nowrap;
 }
-.whatsapp-cta:hover {
-  background: var(--accent);
-  transform: translateY(-2px);
-}
-.whatsapp-cta .arrow { transition: transform .25s ease; }
-.whatsapp-cta:hover .arrow { transform: translateX(4px); }
+.contact-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
+.contact-cta .arrow { transition: transform .25s ease; }
+.contact-cta:hover .arrow { transform: translateX(4px); }
+.contact-cta:hover { transform: translateY(-2px); }
+.contact-cta-wa { background: #25D366; color: #14110D; }
+.contact-cta-wa:hover { background: #1ebe5b; }
+.contact-cta-email { background: var(--ink); color: var(--bg); }
+.contact-cta-email:hover { background: var(--accent); }
 
 @media (max-width: 820px) {
   .contact .wrap { grid-template-columns: 1fr; gap: 30px; }
@@ -1268,9 +1287,10 @@ footer.site .brandline img {
 }
 footer.site .legal {
   margin-top: 50px;
-  padding-top: 24px;
+  padding: 26px var(--gutter);
   border-top: 1px solid rgba(239,231,217,0.15);
-  display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  text-align: center;
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.2em;
@@ -1361,9 +1381,8 @@ footer.site .legal {
 
     <!-- Authorized representative badge with brand logos -->
     <div class="rep-badge reveal d3">
-      <div class="lbl">Representação<br/>Oficial</div>
+      <div class="lbl">Representação Oficial</div>
       <div class="divider"></div>
-      <div class="lbl">Marcas Representadas</div>
       <div class="partner-logos">
         <img src="assets/brands/sulfisa.png" alt="Sulfisa Cozinhas Profissionais" loading="lazy" />
         <img src="assets/brands/kofisa-web.png" alt="Kofisa Refrigeração Comercial" loading="lazy" />
@@ -2973,9 +2992,16 @@ footer.site .legal {
         </div>
       </div>
 
-      <a href="https://wa.me/5511947609085?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20equipamentos%20de%20cozinha%20profissional." class="whatsapp-cta" target="_blank" rel="noopener">
-        Solicitar Orçamento pelo WhatsApp <span class="arrow">→</span>
-      </a>
+      <div class="contact-ctas">
+        <a href="https://wa.me/5511947609085?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20equipamentos%20de%20cozinha%20profissional." class="contact-cta contact-cta-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.003 3C9.374 3 4 8.374 4 15.003c0 2.115.553 4.18 1.604 6.003L4 29l8.183-1.567a11.96 11.96 0 0 0 3.82.626h.001c6.628 0 12.003-5.374 12.003-12.003C28.007 8.374 22.633 3 16.003 3zm0 21.96h-.001a9.96 9.96 0 0 1-5.077-1.39l-.364-.216-4.857.93.926-4.733-.237-.378A9.957 9.957 0 0 1 5.96 15.003c0-5.518 4.49-10.008 10.043-10.008 2.682 0 5.203 1.046 7.1 2.945a9.94 9.94 0 0 1 2.942 7.063c0 5.553-4.49 10.043-10.043 10.043zm5.508-7.515c-.302-.151-1.786-.881-2.062-.982-.276-.1-.477-.151-.678.151-.2.302-.778.982-.953 1.182-.176.2-.351.226-.653.075-.302-.151-1.273-.469-2.424-1.497-.896-.799-1.5-1.785-1.676-2.087-.176-.302-.019-.466.132-.616.136-.135.302-.351.453-.527.151-.176.2-.302.302-.502.1-.2.05-.376-.025-.527-.075-.151-.678-1.633-.928-2.236-.245-.587-.493-.508-.678-.517l-.578-.01c-.2 0-.527.075-.803.376-.276.302-1.054 1.03-1.054 2.512 0 1.482 1.078 2.913 1.229 3.114.151.2 2.124 3.244 5.146 4.55.72.31 1.281.495 1.718.634.722.23 1.378.197 1.897.12.578-.086 1.786-.73 2.037-1.434.252-.703.252-1.305.176-1.434-.075-.126-.276-.2-.578-.351z"/></svg>
+          Solicitar pelo WhatsApp <span class="arrow">→</span>
+        </a>
+        <a href="mailto:contato@hnpcomercial.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20Or%C3%A7amento%20%E2%80%94%20Equipamentos%20de%20Cozinha%20Profissional&amp;body=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.%0D%0A%0D%0AEquipamentos%20de%20interesse%3A%0D%0AQuantidade%3A%0D%0ALocal%20de%20entrega%3A%0D%0A" class="contact-cta contact-cta-email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2z"/><polyline points="22,8 12,14 2,8"/></svg>
+          Solicitar por E-mail <span class="arrow">→</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -2999,8 +3025,6 @@ footer.site .legal {
       <a href="#equipamentos">Linhas de Equipamentos</a>
       <a href="#segmentos">Segmentos Atendidos</a>
       <a href="#contato">Contato</a>
-      <br/>
-      <a href="brand-manual.html" target="_blank">Manual da marca ↗</a>
     </div>
     <div class="col">
       <h4>Contato Direto</h4>
@@ -3012,12 +3036,10 @@ footer.site .legal {
       <p>+30 anos no segmento</p>
     </div>
   </div>
-  <div class="wrap">
-    <div class="legal">
-      <span><strong>HN PINTO &mdash; COMERCIO E REPRESENTACAO &mdash; EPP</strong> · CNPJ 20.944.709/0001-52</span>
-      <span>© <span id="yr"></span> HNP Representação Comercial. Todos os direitos reservados.</span>
-      <span>São Paulo · Brasil · hnpcomercial.com.br</span>
-    </div>
+  <div class="legal">
+    <span><strong>HN PINTO &mdash; COMERCIO E REPRESENTACAO &mdash; EPP</strong> · CNPJ 20.944.709/0001-52</span>
+    <span>© <span id="yr"></span> HNP Representação Comercial. Todos os direitos reservados.</span>
+    <span>São Paulo · Brasil · hnpcomercial.com.br</span>
   </div>
 </footer>
 
