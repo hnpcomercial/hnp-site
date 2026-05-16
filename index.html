@@ -213,9 +213,6 @@ nav.top .wrap {
 .hero-id .hero-id-desc {
   display: flex; flex-direction: column; gap: 14px;
   max-width: 52ch;
-  padding-left: 8px;
-  border-left: 1px solid var(--rule);
-  padding-left: 32px;
 }
 .hero-id .hero-id-desc .kicker {
   font-family: var(--mono);
@@ -240,8 +237,6 @@ nav.top .wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  border-top: 1px solid var(--rule);
-  padding-top: 24px;
 }
 .hero-sub p.lede {
   font-family: var(--serif);
@@ -287,8 +282,7 @@ nav.top .wrap {
 .rep-badge {
   margin-top: 24px;
   border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-  padding: 22px 0;
+  padding: 22px 0 6px;
   display: grid;
   grid-template-columns: auto 1fr auto auto;
   gap: 40px;
@@ -659,9 +653,9 @@ nav.top .wrap {
   box-shadow: 0 1px 0 rgba(20,17,13,0.04);
 }
 .brand-header .logo-box img {
-  height: 56px;
-  width: 200px;
-  max-width: 100%;
+  height: 48px;
+  width: auto;
+  max-width: 90%;
   object-fit: contain;
 }
 .brand-header .title-area {
@@ -779,6 +773,37 @@ nav.top .wrap {
   color: var(--steel);
 }
 .product-group .product-mosaic { margin-top: 0; }
+
+/* Collapsible product groups (8 visible, expand on click) */
+.product-group.is-collapsible:not(.is-expanded) .product-card:nth-child(n+9) {
+  display: none;
+}
+.see-more {
+  margin-top: 22px;
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all .25s ease;
+  display: inline-flex; align-items: center; gap: 12px;
+}
+.see-more:hover {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.see-more .count {
+  color: var(--accent);
+}
+.see-more:hover .count { color: var(--bg); }
+.see-more .arrow { transition: transform .2s ease; }
+.product-group.is-expanded .see-more .arrow { transform: rotate(180deg); }
 .product-card {
   background: var(--bg-photo);
   border: 1px solid var(--rule);
@@ -1285,9 +1310,6 @@ footer.site .legal {
           atendemos restaurantes, padarias, bares e redes de fast food com curadoria
           técnica, condições comerciais diferenciadas e acompanhamento próximo do início ao fim de cada operação.
         </p>
-        <a href="https://wa.me/5511947609085?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20HNP%20Representa%C3%A7%C3%A3o%20Comercial." class="cta-primary" target="_blank" rel="noopener">
-          Conversar pelo WhatsApp <span class="arrow">→</span>
-        </a>
       </div>
     </div>
 
@@ -1297,7 +1319,7 @@ footer.site .legal {
       <div class="divider"></div>
       <div class="lbl">Marcas Representadas</div>
       <div class="partner-logos">
-        <img src="https://lp.sulfisa.com/wp-content/uploads/2025/08/Group-4.png" alt="Sulfisa Cozinhas Profissionais" loading="lazy" />
+        <img src="assets/brands/sulfisa.png" alt="Sulfisa Cozinhas Profissionais" loading="lazy" />
         <img src="assets/brands/kofisa-web.png" alt="Kofisa Refrigeração Comercial" loading="lazy" />
       </div>
     </div>
@@ -1487,7 +1509,7 @@ footer.site .legal {
       <div class="brand-block io">
         <div class="brand-header">
           <div class="logo-box">
-            <img src="https://lp.sulfisa.com/wp-content/uploads/2025/08/Group-4.png" alt="Sulfisa — Cozinhas Profissionais" loading="lazy" />
+            <img src="assets/brands/sulfisa.png" alt="Sulfisa — Cozinhas Profissionais" loading="lazy" />
           </div>
           <div class="title-area">
             <span class="tagline">No mercado desde 2009</span>
@@ -2975,6 +2997,27 @@ footer.site .legal {
       const fb = img.nextElementSibling;
       if (fb && fb.classList.contains('fallback')) fb.style.display = 'grid';
     });
+  });
+
+  // Collapsible product groups: hide cards beyond the 8th, add "Ver mais" button.
+  document.querySelectorAll('.product-group').forEach(group => {
+    const mosaic = group.querySelector('.product-mosaic');
+    if (!mosaic) return;
+    const total = mosaic.querySelectorAll('.product-card').length;
+    if (total <= 8) return;
+    group.classList.add('is-collapsible');
+    const hidden = total - 8;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'see-more';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = `<span class="lbl">Ver mais</span> <span class="count">+${hidden}</span> <span class="arrow" aria-hidden="true">↓</span>`;
+    btn.addEventListener('click', () => {
+      const expanded = group.classList.toggle('is-expanded');
+      btn.setAttribute('aria-expanded', String(expanded));
+      btn.querySelector('.lbl').textContent = expanded ? 'Ver menos' : 'Ver mais';
+    });
+    mosaic.after(btn);
   });
 
   // Logo fallback
