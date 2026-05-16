@@ -197,16 +197,12 @@ nav.top .wrap {
 }
 .hero-meta .right { color: var(--accent); }
 
-.hero h1 {
-  font-size: clamp(44px, 7.5vw, 104px);
-  letter-spacing: -0.035em;
-  line-height: 0.95;
-  font-variation-settings: "SOFT" 30, "opsz" 144, "wght" 350;
-}
-.hero h1 em {
-  font-style: italic;
-  font-variation-settings: "SOFT" 80, "opsz" 144, "wght" 280;
-  color: var(--ink-soft);
+.hero-logo {
+  display: block;
+  width: clamp(220px, 28vw, 360px);
+  height: auto;
+  margin-top: 8px;
+  margin-bottom: 4px;
 }
 .hero-sub {
   display: grid;
@@ -728,6 +724,29 @@ nav.top .wrap {
   gap: 14px;
   margin-top: 8px;
 }
+.product-group { margin-top: 36px; }
+.product-group:first-of-type { margin-top: 12px; }
+.product-group .group-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+.product-group .group-head .g-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.product-group .group-head .g-count {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: var(--steel);
+}
+.product-group .product-mosaic { margin-top: 0; }
 .product-card {
   background: var(--bg-photo);
   border: 1px solid var(--rule);
@@ -1211,7 +1230,7 @@ footer.site .legal {
       <div class="right">● Há mais de três décadas no segmento</div>
     </div>
 
-    <h1 class="reveal d1">HNP <em>Representação<br/>Comercial.</em></h1>
+    <img src="assets/logo/svg/hnp-logo-full-dark.svg" alt="HNP Representação Comercial" class="hero-logo reveal d1" />
 
     <div class="hero-sub reveal d2">
       <p class="lede">
@@ -1475,52 +1494,868 @@ footer.site .legal {
           </div>
         </div>
 
-        <!-- Sulfisa product mosaic -->
-        <div class="product-mosaic">
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://lp.sulfisa.com/wp-content/uploads/2025/08/equipamento-13-1024x1024.jpg" alt="Fogão Industrial Sulfisa" loading="lazy" />
-              <div class="fallback">Foto indisponível</div>
+        <!-- Catálogo completo, agrupado por sub-categoria -->
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Refrigeração</span>
+            <span class="g-count">10 LINHAS</span>
+          </div>
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-54-300x173.png" alt="Cabeçote Refrigerado Suspenso p/ Balcão Horizontal" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Cabeçote Refrigerado Suspenso p/ Balcão Horizontal</span>
+              </div>
             </div>
-            <div class="meta">
-              <span class="cat">Cocção</span>
-              <span class="name">Fogão Industrial Inox 304 6 QD Centro</span>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-45-300x173.png" alt="Freezer Horizontal" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Freezer Horizontal</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-53-300x209.png" alt="Freezer para Copos" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Freezer para Copos</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-50-300x173.png" alt="Mini Câmara Congelada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Mini Câmara Congelada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-51-300x173.png" alt="Mini Câmara Refrigerada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Mini Câmara Refrigerada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-48-300x173.png" alt="Porta Bi-partida" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Porta Bi-partida</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-43-300x173.png" alt="Porta Bipartida Inox" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Porta Bipartida Inox</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-42-300x173.png" alt="Porta Inteiriça Inox" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Porta Inteiriça Inox</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-46-300x173.png" alt="Refrigerador de Base Cocção com Gavetas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Refrigerador de Base Cocção com Gavetas</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-47-300x173.png" alt="Refrigerador Horizontal" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Refrigerador Horizontal</span>
+              </div>
             </div>
           </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://lp.sulfisa.com/wp-content/uploads/2025/08/equipamento-12-1024x1024.jpg" alt="Fritadeira a Gás GLP 23L Sulfisa" loading="lazy" />
+        </div>
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Cocção</span>
+            <span class="g-count">35 LINHAS</span>
+          </div>
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-21-300x173.png" alt="Banho Maria a Gás Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Banho Maria a Gás Modular</span>
+              </div>
             </div>
-            <div class="meta">
-              <span class="cat">Cocção</span>
-              <span class="name">Fritadeira GLP Full 23L Digital</span>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-17-300x174.png" alt="Caldeirão Industrial Gás Vapor" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Caldeirão Industrial Gás Vapor</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-12-1-300x173.png" alt="Chapa a Gás Linha Americana — 1″" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Chapa a Gás Linha Americana — 1″</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-9-300x169.png" alt="Chapa a Gás Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Chapa a Gás Modular</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-11-300x174.png" alt="Chapa Industrial a Gás" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Chapa Industrial a Gás</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-13-300x173.png" alt="Char Broiler a Gás" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Char Broiler a Gás</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-16-300x173.png" alt="Char Broiler a Gás — Linha Americana" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Char Broiler a Gás — Linha Americana</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-15-300x173.png" alt="Char Broiler Elétrico" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Char Broiler Elétrico</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-4-300x188.png" alt="Coifa de Centro c/ 1 Linha de Filtros" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Coifa de Centro c/ 1 Linha de Filtros</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-4-300x188.png" alt="Coifa de Centro c/ 1 Linha de Filtros e Iluminação" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Coifa de Centro c/ 1 Linha de Filtros e Iluminação</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-4-300x188.png" alt="Coifa de Centro c/ 2 Linhas de Filtros" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Coifa de Centro c/ 2 Linhas de Filtros</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-4-300x188.png" alt="Coifa de Centro c/ 2 Linhas de Filtros e Iluminação" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Coifa de Centro c/ 2 Linhas de Filtros e Iluminação</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-3-300x188.png" alt="Coifa de Centro Simples" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Coifa de Centro Simples</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-4-300x188.png" alt="Coifa de Encosto c/ 1 Linha de Filtros e Iluminação" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Coifa de Encosto c/ 1 Linha de Filtros e Iluminação</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-3-300x188.png" alt="Coifa de Encosto com 1 Linha de Filtros" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Coifa de Encosto com 1 Linha de Filtros</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-3-300x188.png" alt="Coifa de Encosto Simples" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Coifa de Encosto Simples</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-28-300x169.png" alt="Conservador de Frituras — Linha Americana" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Conservador de Frituras — Linha Americana</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-13-300x174.jpg" alt="Conservador de Frituras Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Conservador de Frituras Modular</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-41-300x173.png" alt="Conservador de Proteínas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Conservador de Proteínas</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-23-300x173.png" alt="Cozedor de Massas a Gás Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Cozedor de Massas a Gás Modular</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-24-300x173.png" alt="Cozedor de Massas Elétrico Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Cozedor de Massas Elétrico Modular</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-20-300x174.png" alt="Estufa de Base Elétrica Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Estufa de Base Elétrica Modular</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-5-300x173.jpg" alt="Fogão a Gás Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Fogão a Gás Modular</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-6-300x173.png" alt="Fogão de Mesa — Linha Americana" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Fogão de Mesa — Linha Americana</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-8-300x174.jpg" alt="Fogão Encosto 30×30" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Fogão Encosto 30×30</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-7-300x173.png" alt="Fogão Francês a Gás Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Fogão Francês a Gás Modular</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-5-300x173.png" alt="Fogão Industrial de Centro" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Fogão Industrial de Centro</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-18-300x136.png" alt="Forno Industrial a Gás" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Forno Industrial a Gás</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-12-300x174.jpg" alt="Forno p/ Fogão Comercial — 01 Grade Zincada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Forno p/ Fogão Comercial — 01 Grade Zincada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-19-300x173.png" alt="Forno p/ Fogão Industrial — 01 Grade Niquelada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Forno p/ Fogão Industrial — 01 Grade Niquelada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-27-300x173.png" alt="Fritadeira a Gás Full 23 Litros" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Fritadeira a Gás Full 23 Litros</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-25-300x173.png" alt="Fritadeira Elétrica Analógica Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Fritadeira Elétrica Analógica Modular</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-14-300x174.jpg" alt="Módulo de Base — Linha Americana" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Módulo de Base — Linha Americana</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-30-300x173.png" alt="Módulo de Base Aberto Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Módulo de Base Aberto Modular</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-36-300x173.png" alt="Módulo de Base com Portas Modular" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Módulo de Base com Portas Modular</span>
+              </div>
             </div>
           </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://lp.sulfisa.com/wp-content/uploads/2025/08/equipamento-14-1024x1024.jpg" alt="Caldeirão Tampa Americana 100L Sulfisa" loading="lazy" />
+        </div>
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Vitrines Expositoras</span>
+            <span class="g-count">06 LINHAS</span>
+          </div>
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-97-300x173.png" alt="Expositor Auto-Serviço Alta Refrigerada Aberta" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto-Serviço Alta Refrigerada Aberta</span>
+              </div>
             </div>
-            <div class="meta">
-              <span class="cat">Cocção</span>
-              <span class="name">Caldeirão Tampa Americana 100 L</span>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-93-300x173.png" alt="Vitrine Aquecida Baixa" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Vitrine Aquecida Baixa</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-98-300x173.png" alt="Vitrine Auto-Serviço Refrigerada Baixa Aberta" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Vitrine Auto-Serviço Refrigerada Baixa Aberta</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-96-300x173.png" alt="Vitrine Expositora de Auto-Serviço" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Vitrine Expositora de Auto-Serviço</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-95-300x173.png" alt="Vitrine Neutra Baixa" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Vitrine Neutra Baixa</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-94-300x173.png" alt="Vitrine Refrigerada Baixa" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Vitrine Refrigerada Baixa</span>
+              </div>
             </div>
           </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://lp.sulfisa.com/wp-content/uploads/2025/08/equipamento-15-1024x1024.jpg" alt="Mini Câmara Congelada Vertical Sulfisa" loading="lazy" />
-            </div>
-            <div class="meta">
-              <span class="cat">Refrigeração</span>
-              <span class="name">Mini Câmara Congelada Vertical 2P Inox</span>
+        </div>
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Linha Fast Food</span>
+            <span class="g-count">01 LINHA</span>
+          </div>
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-92-300x173.png" alt="Pista Aquecida de Sobrepor" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pista Aquecida de Sobrepor</span>
+              </div>
             </div>
           </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://lp.sulfisa.com/wp-content/uploads/2025/08/equipamento-11-1024x1024.jpg" alt="Estante Inox 430 Sulfisa" loading="lazy" />
+        </div>
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Auxiliares & Mobiliário</span>
+            <span class="g-count">28 LINHAS</span>
+          </div>
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-68-300x174.png" alt="Bancada de Centro com Prateleira Perfurada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada de Centro com Prateleira Perfurada</span>
+              </div>
             </div>
-            <div class="meta">
-              <span class="cat">Mobiliário Inox</span>
-              <span class="name">Estante Inox 430 com 4 Prateleiras Desm.</span>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-64-300x174.png" alt="Bancada de Centro Contraventada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada de Centro Contraventada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-65-300x174.png" alt="Bancada de Encosto com Prateleira Lisa" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada de Encosto com Prateleira Lisa</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-67-300x174.png" alt="Bancada de Encosto com Prateleira Perfurada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada de Encosto com Prateleira Perfurada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-63-300x174.png" alt="Bancada de Encosto Contraventada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada de Encosto Contraventada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-73-300x174.png" alt="Bancada Esqueleto com Prateleira Inferior Perfurada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada Esqueleto com Prateleira Inferior Perfurada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-72-300x174.png" alt="Bancada Esqueleto de Centro com Prateleira Inferior Lisa" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada Esqueleto de Centro com Prateleira Inferior Lisa</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-70-300x174.png" alt="Bancada Esqueleto de Centro Contraventada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada Esqueleto de Centro Contraventada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-74-300x174.png" alt="Bancada Esqueleto de Centro Prateleira Inferior Perfurada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada Esqueleto de Centro Prateleira Inferior Perfurada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-71-300x174.png" alt="Bancada Esqueleto de Encosto com Prateleira Inferior Lisa" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada Esqueleto de Encosto com Prateleira Inferior Lisa</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-69-300x163.png" alt="Bancada Esqueleto de Encosto Contraventada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada Esqueleto de Encosto Contraventada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-17-300x225.jpg" alt="Carro Cantoneira" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Carro Cantoneira</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-61-300x188.png" alt="Carro Chassi" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Carro Chassi</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-62-300x173.png" alt="Carro de Transporte Aquecido" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Carro de Transporte Aquecido</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-59-300x173.png" alt="Carro de Transporte Auxiliar" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Carro de Transporte Auxiliar</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-55-300x174.png" alt="Carro para Detritos" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Carro para Detritos</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-57-300x174.png" alt="Carro para Lavagem de Cereais" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Carro para Lavagem de Cereais</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-15-300x225.jpg" alt="Carro para Remolho de Talheres" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Carro para Remolho de Talheres</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-56-300x174.png" alt="Carro para Transporte de Pratos" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Carro para Transporte de Pratos</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-58-300x173.png" alt="Carro Plataforma" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Carro Plataforma</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-60-300x173.png" alt="Carro Tanque" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Carro Tanque</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-76-300x174.png" alt="Estante 04 Planos Lisos" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Estante 04 Planos Lisos</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-77-300x174.png" alt="Estante 04 Planos Perfurados" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Estante 04 Planos Perfurados</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-20-300x174.jpg" alt="Pia 02 Cubas 500×400×250 mm" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pia 02 Cubas 500×400×250 mm</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-21-300x174.jpg" alt="Pia 02 Cubas 600×500×330 mm" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pia 02 Cubas 600×500×330 mm</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-18-300x174.jpg" alt="Pia com 01 Cuba 500×400×250 mm" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pia com 01 Cuba 500×400×250 mm</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-19-300x174.jpg" alt="Pia com 1 Cuba 600×500×330 mm" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pia com 1 Cuba 600×500×330 mm</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-75-300x251.png" alt="Pia de Assepsia" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pia de Assepsia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Bar</span>
+            <span class="g-count">01 LINHA</span>
+          </div>
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-99-300x250.png" alt="Módulo Componível Linha Bar" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Módulo Componível Linha Bar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Complementares</span>
+            <span class="g-count">06 LINHAS</span>
+          </div>
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-30-300x212.jpg" alt="Balança Eletrônica Pesadora" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balança Eletrônica Pesadora</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-26-300x174.jpg" alt="Batedeiras Planetárias" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Batedeiras Planetárias</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-29-300x174.jpg" alt="Câmaras Frigoríficas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Câmaras Frigoríficas</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-28-300x174.jpg" alt="Esguicho de Parede" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Esguicho de Parede</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-23-300x174.jpg" alt="Fornos Combinados" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Fornos Combinados</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-25-300x174.jpg" alt="Máquina de Gelo" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Máquina de Gelo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Distribuição</span>
+            <span class="g-count">13 LINHAS</span>
+          </div>
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-91-300x188.png" alt="Aquecedor para Prateleira Superior — Heat Lamp" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Aquecedor para Prateleira Superior — Heat Lamp</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-66-300x174.png" alt="Bancada de Centro com Prateleira Lisa" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Bancada de Centro com Prateleira Lisa</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-89-300x140.png" alt="Estufa Horizontal Aquecida — Portas de Correr — Sem Tampo" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Estufa Horizontal Aquecida — Portas de Correr — Sem Tampo</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-88-300x174.png" alt="Pass Thru Vertical Aquecido Porta Inox" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pass Thru Vertical Aquecido Porta Inox</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-84-300x188.png" alt="Pass Thru Vertical Refrigerado" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pass Thru Vertical Refrigerado</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-86-300x188.png" alt="Pass Thru Vertical Refrigerado Porta Vidro" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pass Thru Vertical Refrigerado Porta Vidro</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-78-300x188.png" alt="Pista Aquecida Banho Maria" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pista Aquecida Banho Maria</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-92-300x173.png" alt="Pista Aquecida de Sobrepor" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pista Aquecida de Sobrepor</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-79-300x188.png" alt="Pista Aquecida Seca" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pista Aquecida Seca</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-81-300x188.png" alt="Pista Aquecida Seca Plana Protetor Salivar e Aquecimento Superior" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pista Aquecida Seca Plana Protetor Salivar e Aquecimento Superior</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-82-300x188.png" alt="Pista Refrigerada" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pista Refrigerada</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-83-300x188.png" alt="Pista Refrigerada Plana" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Pista Refrigerada Plana</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://sulfisa.com/wp-content/uploads/2024/06/download-44-300x173.png" alt="Porta Inteiriça Vidro" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Porta Inteiriça Vidro</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1579,78 +2414,268 @@ footer.site .legal {
           </div>
         </div>
 
-        <!-- Kofisa product mosaic -->
-        <div class="product-mosaic">
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Refrigerador-Vertical-4-Portas-Linha-Professionale_0004_4-800x800.png" alt="Refrigerador Vertical 4 Portas Kofisa" loading="lazy" />
+        <!-- Catálogo completo, agrupado por sub-categoria -->
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Linha Professionale</span>
+            <span class="g-count">13 LINHAS</span>
+          </div>
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Refrigerador-Vertical-2-Portas-Linha-Professionale_0004_4-800x948.png" alt="Refrigerador Vertical — 2 Portas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Refrigerador Vertical — 2 Portas</span>
+              </div>
             </div>
-            <div class="meta">
-              <span class="cat">Linha Professionale</span>
-              <span class="name">Refrigerador Vertical &mdash; 4 Portas</span>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Refrigerador-Vertical-4-Portas-Linha-Professionale_0004_4-800x948.png" alt="Refrigerador Vertical — 4 Portas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Refrigerador Vertical — 4 Portas</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Refrigerador-Vertical-6-Portas-Linha-Professionale_0004_4-1-800x948.png" alt="Refrigerador Vertical — 6 Portas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Refrigerador Vertical — 6 Portas</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-de-Servico-2-Portas-Com-Pia-Linha-Professionale_0009_3.png" alt="Balcão de Serviço — 2 Portas c/ Pia" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balcão de Serviço — 2 Portas c/ Pia</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-de-Servico-2-Portas-Sem-Pia-Linha-Professionale_0007_3.png" alt="Balcão de Serviço — 2 Portas s/ Pia" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balcão de Serviço — 2 Portas s/ Pia</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-de-Servico-3-Portas-Com-Pia-Linha-Professionale_0009_3-800x948.png" alt="Balcão de Serviço — 3 Portas c/ Pia" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balcão de Serviço — 3 Portas c/ Pia</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-de-Servico-3-Portas-Sem-Pia-Linha-Professionale_0007_3-800x948.png" alt="Balcão de Serviço — 3 Portas s/ Pia" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balcão de Serviço — 3 Portas s/ Pia</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/03/Balcao-de-Servico-Linha-Professionale-4-Portas-Com-Pia-9.png" alt="Balcão de Serviço — 4 Portas c/ Pia" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balcão de Serviço — 4 Portas c/ Pia</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-de-Servico-4-Portas-Sem-Pia-Linha-Professionale_0007_3.png" alt="Balcão de Serviço — 4 Portas s/ Pia" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balcão de Serviço — 4 Portas s/ Pia</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-de-Servico-5-Portas-Com-Pia-Linha-Professionale_0009_3.png" alt="Balcão de Serviço — 5 Portas c/ Pia" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balcão de Serviço — 5 Portas c/ Pia</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-de-Servico-5-Portas-Sem-Pia-Linha-Professionale_0007_3.png" alt="Balcão de Serviço — 5 Portas s/ Pia" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balcão de Serviço — 5 Portas s/ Pia</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-Condimentador-2-Portas-Linha-Professionale_0009_1-800x948.png" alt="Balcão Condimentador — 2 Portas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balcão Condimentador — 2 Portas</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-Condimentador-3-Portas-Linha-Professionale_0009_1-800x948.png" alt="Balcão Condimentador — 3 Portas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Balcão Condimentador — 3 Portas</span>
+              </div>
             </div>
           </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-de-Servico-2-Portas-Com-Pia-Linha-Professionale_0009_3-800x800.png" alt="Balcão de Serviço com Pia Kofisa" loading="lazy" />
+        </div>
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Linha Blanc</span>
+            <span class="g-count">12 LINHAS</span>
+          </div>
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Cinza-2-Portas-Frios-e-Laticinios-Linha-Blanc_0000_7.png" alt="Expositor Auto Serviço — Cinza 2 Portas — Frios e Laticínios" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Cinza 2 Portas — Frios e Laticínios</span>
+              </div>
             </div>
-            <div class="meta">
-              <span class="cat">Linha Professionale</span>
-              <span class="name">Balcão de Serviço 2P com Pia</span>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Cinza-3-Portas-Frios-e-Laticinios-Linha-Blanc_0001_7.png" alt="Expositor Auto Serviço — Cinza 3 Portas — Frios e Laticínios" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Cinza 3 Portas — Frios e Laticínios</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Cinza-5-Portas-Frios-e-Laticinios-Linha-Blanc_0001_7-800x948.png" alt="Expositor Auto Serviço — Cinza 5 Portas — Frios e Laticínios" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Cinza 5 Portas — Frios e Laticínios</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Preto-2-Portas-Frios-e-Laticinios-Linha-Blanc_0003_3.png" alt="Expositor Auto Serviço — Preto 2 Portas — Frios e Laticínios" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Preto 2 Portas — Frios e Laticínios</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2022/12/Expositor-Auto-Servico-Blanc-Preto-3-P-Frios-e-Laticinios-7-800x449.png" alt="Expositor Auto Serviço — Preto 3 Portas — Frios e Laticínios" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Preto 3 Portas — Frios e Laticínios</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Preto-5-Portas-Frios-e-Laticinios-Linha-Blanc_0003_3.png" alt="Expositor Auto Serviço — Preto 5 Portas — Frios e Laticínios" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Preto 5 Portas — Frios e Laticínios</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Preto-2-Portas-Bebidas-Linha-Blanc_0006_7-800x948.png" alt="Expositor Auto Serviço — Preto 2 Portas — Bebidas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Preto 2 Portas — Bebidas</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Preto-3-Portas-Bebidas-Linha-Blanc_0000_7-800x948.png" alt="Expositor Auto Serviço — Preto 3 Portas — Bebidas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Preto 3 Portas — Bebidas</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Preto-2-Portas-Carnes-Linha-Blanc_0000_7-800x948.png" alt="Expositor Auto Serviço — Preto 2 Portas — Carnes" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Preto 2 Portas — Carnes</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Preto-3-Portas-Carnes-Linha-Blanc_0000_7-800x948.png" alt="Expositor Auto Serviço — Preto 3 Portas — Carnes" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Preto 3 Portas — Carnes</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Preto-2-Portas-Hortifruti-Linha-Blanc_0001_11.png" alt="Expositor Auto Serviço — Preto 2 Portas — Hortifruti" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Preto 2 Portas — Hortifruti</span>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Preto-3-Portas-Hortifruti-Linha-Blanc_0001_11.png" alt="Expositor Auto Serviço — Preto 3 Portas — Hortifruti" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Expositor Auto Serviço — Preto 3 Portas — Hortifruti</span>
+              </div>
             </div>
           </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Balcao-Condimentador-2-Portas-Linha-Professionale_0009_1-800x800.png" alt="Balcão Condimentador Kofisa" loading="lazy" />
-            </div>
-            <div class="meta">
-              <span class="cat">Linha Professionale</span>
-              <span class="name">Balcão Condimentador 2 Portas</span>
-            </div>
+        </div>
+        <div class="product-group">
+          <div class="group-head">
+            <span class="g-title">Mini Câmaras</span>
+            <span class="g-count">05 LINHAS</span>
           </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Expositor-Auto-Servico-Cinza-2-Portas-Frios-e-Laticinios-Linha-Blanc_0000_7-800x800.png" alt="Expositor Auto Serviço Linha Blanc Kofisa" loading="lazy" />
+          <div class="product-mosaic">
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Mini-Camara-para-Caixas_0002_10-800x948.png" alt="Mini Câmara para Caixas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Mini Câmara para Caixas</span>
+              </div>
             </div>
-            <div class="meta">
-              <span class="cat">Linha Blanc</span>
-              <span class="name">Expositor Auto Serviço &mdash; Frios</span>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Mini-Camara-para-Cubas-Gastronomicas_0002_10.png" alt="Mini Câmara para Cubas Gastronômicas — GN" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Mini Câmara para Cubas Gastronômicas — GN</span>
+              </div>
             </div>
-          </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Mini-Camara-para-Panificacao-2-Portas_0006_2-800x800.png" alt="Mini Câmara para Panificação Kofisa" loading="lazy" />
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Mini-Camara-para-Panificacao-2-Portas_0006_2-800x948.png" alt="Mini Câmara para Panificação — 2 Portas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Mini Câmara para Panificação — 2 Portas</span>
+              </div>
             </div>
-            <div class="meta">
-              <span class="cat">Mini Câmaras</span>
-              <span class="name">Mini Câmara Panificação 2 Portas</span>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Mini-Camara-para-Panificacao-4-Portas_0006_2-800x948.png" alt="Mini Câmara para Panificação — 4 Portas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Mini Câmara para Panificação — 4 Portas</span>
+              </div>
             </div>
-          </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Mini-Camara-para-Cubas-Gastronomicas_0002_10-800x800.png" alt="Mini Câmara para Cubas Gastronômicas Kofisa" loading="lazy" />
-            </div>
-            <div class="meta">
-              <span class="cat">Mini Câmaras</span>
-              <span class="name">Mini Câmara para Cubas GN</span>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Refrigerador-Vertical-6-Portas-Linha-Professionale_0004_4-1-800x800.png" alt="Refrigerador Vertical 6 Portas Kofisa" loading="lazy" />
-            </div>
-            <div class="meta">
-              <span class="cat">Linha Professionale</span>
-              <span class="name">Refrigerador Vertical &mdash; 6 Portas</span>
-            </div>
-          </div>
-          <div class="product-card">
-            <div class="photo">
-              <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Refrigerador-Vertical-2-Portas-Linha-Professionale_0004_4-800x800.png" alt="Refrigerador Vertical 2 Portas Kofisa" loading="lazy" />
-            </div>
-            <div class="meta">
-              <span class="cat">Linha Professionale</span>
-              <span class="name">Refrigerador Vertical &mdash; 2 Portas</span>
+            <div class="product-card">
+              <div class="photo">
+                <img src="https://kofisa.com.br/wp-content/uploads/2023/01/Mini-Camara-para-Panificacao-6-Portas_0006_2-800x948.png" alt="Mini Câmara para Panificação — 6 Portas" loading="lazy" />
+              </div>
+              <div class="meta">
+                <span class="name">Mini Câmara para Panificação — 6 Portas</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1880,6 +2905,7 @@ footer.site .legal {
   </div>
   <div class="wrap">
     <div class="legal">
+      <span><strong>HN PINTO &mdash; COMERCIO E REPRESENTACAO &mdash; EPP</strong> · CNPJ 20.944.709/0001-52</span>
       <span>© <span id="yr"></span> HNP Representação Comercial. Todos os direitos reservados.</span>
       <span>São Paulo · Brasil · hnpcomercial.com.br</span>
     </div>
