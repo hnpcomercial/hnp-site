@@ -204,6 +204,38 @@ nav.top .wrap {
   margin-top: 4px;
   margin-bottom: 0;
 }
+.hero-id {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero-id .hero-id-desc {
+  display: flex; flex-direction: column; gap: 14px;
+  max-width: 52ch;
+  padding-left: 8px;
+  border-left: 1px solid var(--rule);
+  padding-left: 32px;
+}
+.hero-id .hero-id-desc .kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.hero-id .hero-id-desc .body {
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.55vw, 21px);
+  line-height: 1.35;
+  font-variation-settings: "SOFT" 30, "opsz" 24, "wght" 380;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+@media (max-width: 820px) {
+  .hero-id { grid-template-columns: 1fr; gap: 24px; }
+  .hero-id .hero-id-desc { border-left: none; padding-left: 0; }
+}
 .hero-sub {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -627,9 +659,9 @@ nav.top .wrap {
   box-shadow: 0 1px 0 rgba(20,17,13,0.04);
 }
 .brand-header .logo-box img {
-  max-height: 60px;
+  height: 56px;
+  width: 200px;
   max-width: 100%;
-  width: auto;
   object-fit: contain;
 }
 .brand-header .title-area {
@@ -1227,10 +1259,19 @@ footer.site .legal {
   <div class="wrap" style="position: relative; z-index: 1;">
     <div class="hero-meta reveal">
       <div class="left">Representação Comercial — Cozinhas Profissionais</div>
-      <div class="right">● Há mais de três décadas no segmento</div>
     </div>
 
-    <img src="assets/logo/svg/hnp-logo-full-dark.svg" alt="HNP Representação Comercial" class="hero-logo reveal d1" />
+    <div class="hero-id reveal d1">
+      <img src="assets/logo/svg/hnp-logo-full-dark.svg" alt="HNP Representação Comercial" class="hero-logo" />
+      <div class="hero-id-desc">
+        <span class="kicker">Fundada em 2015 · São Paulo</span>
+        <p class="body">
+          Onze anos representando oficialmente <strong>Sulfisa</strong> e <strong>Kofisa</strong>,
+          apoiada pela memória técnica do sócio-fundador &mdash; acumulada em mais de
+          três décadas dentro de cozinhas industriais.
+        </p>
+      </div>
+    </div>
 
     <div class="hero-sub reveal d2">
       <p class="lede">
@@ -2915,7 +2956,8 @@ footer.site .legal {
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Reveal on scroll
+  // Reveal on scroll. threshold: 0 so very tall blocks (e.g. 100-product
+  // brand-block) trigger as soon as the top edge enters the viewport.
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
       if (e.isIntersecting) {
@@ -2923,7 +2965,7 @@ footer.site .legal {
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -80px 0px' });
   document.querySelectorAll('.io').forEach(el => io.observe(el));
 
   // Graceful image fallback: hide broken product images
