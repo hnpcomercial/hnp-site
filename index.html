@@ -144,8 +144,31 @@ nav.top .wrap {
 }
 .nav-cta:hover { background: var(--ink); color: var(--bg); }
 
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-whatsapp {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  background: #25D366;
+  color: #14110D;
+  border-radius: 999px;
+  transition: all .25s ease;
+  white-space: nowrap;
+}
+.nav-whatsapp:hover { background: #1ebe5b; transform: translateY(-1px); }
+.nav-whatsapp svg { width: 14px; height: 14px; flex-shrink: 0; }
+.nav-whatsapp .label-full { display: inline; }
+.nav-whatsapp .label-short { display: none; }
+
 @media (max-width: 820px) {
   .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .nav-whatsapp { padding: 9px 14px; letter-spacing: 0.1em; }
+  .nav-whatsapp .label-full { display: none; }
+  .nav-whatsapp .label-short { display: inline; }
 }
 
 /* ========== HERO ========== */
@@ -175,9 +198,9 @@ nav.top .wrap {
 .hero-meta .right { color: var(--accent); }
 
 .hero h1 {
-  font-size: clamp(72px, 14vw, 220px);
-  letter-spacing: -0.045em;
-  line-height: 0.86;
+  font-size: clamp(44px, 7.5vw, 104px);
+  letter-spacing: -0.035em;
+  line-height: 0.95;
   font-variation-settings: "SOFT" 30, "opsz" 144, "wght" 350;
 }
 .hero h1 em {
@@ -230,19 +253,6 @@ nav.top .wrap {
 
 @media (max-width: 820px) {
   .hero-sub { grid-template-columns: 1fr; gap: 30px; }
-}
-
-.hero-flame {
-  position: absolute;
-  right: -40px; top: 100px;
-  width: 360px; height: 360px;
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: 0;
-}
-.hero-flame svg { width: 100%; height: 100%; }
-@media (max-width: 820px) {
-  .hero-flame { width: 200px; height: 200px; top: 130px; right: -30px; opacity: 0.25;}
 }
 
 /* Authorized representative badge */
@@ -1182,33 +1192,19 @@ footer.site .legal {
       <a href="#equipamentos">Equipamentos</a>
       <a href="#segmentos">Segmentos</a>
     </div>
-    <a href="#contato" class="nav-cta">Solicitar Orçamento</a>
+    <div class="nav-right">
+      <a href="https://wa.me/5511947609085?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20HNP%20Representa%C3%A7%C3%A3o%20Comercial." class="nav-whatsapp" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.003 3C9.374 3 4 8.374 4 15.003c0 2.115.553 4.18 1.604 6.003L4 29l8.183-1.567a11.96 11.96 0 0 0 3.82.626h.001c6.628 0 12.003-5.374 12.003-12.003C28.007 8.374 22.633 3 16.003 3zm0 21.96h-.001a9.96 9.96 0 0 1-5.077-1.39l-.364-.216-4.857.93.926-4.733-.237-.378A9.957 9.957 0 0 1 5.96 15.003c0-5.518 4.49-10.008 10.043-10.008 2.682 0 5.203 1.046 7.1 2.945a9.94 9.94 0 0 1 2.942 7.063c0 5.553-4.49 10.043-10.043 10.043zm5.508-7.515c-.302-.151-1.786-.881-2.062-.982-.276-.1-.477-.151-.678.151-.2.302-.778.982-.953 1.182-.176.2-.351.226-.653.075-.302-.151-1.273-.469-2.424-1.497-.896-.799-1.5-1.785-1.676-2.087-.176-.302-.019-.466.132-.616.136-.135.302-.351.453-.527.151-.176.2-.302.302-.502.1-.2.05-.376-.025-.527-.075-.151-.678-1.633-.928-2.236-.245-.587-.493-.508-.678-.517l-.578-.01c-.2 0-.527.075-.803.376-.276.302-1.054 1.03-1.054 2.512 0 1.482 1.078 2.913 1.229 3.114.151.2 2.124 3.244 5.146 4.55.72.31 1.281.495 1.718.634.722.23 1.378.197 1.897.12.578-.086 1.786-.73 2.037-1.434.252-.703.252-1.305.176-1.434-.075-.126-.276-.2-.578-.351z"/></svg>
+        <span class="label-full">WhatsApp</span>
+        <span class="label-short">WhatsApp</span>
+      </a>
+      <a href="#contato" class="nav-cta">Solicitar Orçamento</a>
+    </div>
   </div>
 </nav>
 
 <!-- ============================ HERO ============================ -->
 <section class="hero">
-  <div class="hero-flame">
-    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g stroke="#C2521E" stroke-width="0.7" fill="none">
-        <path d="M200 380 C 80 380 80 280 130 220 C 150 195 155 180 145 150 C 200 195 245 195 245 150 C 260 195 295 240 295 290 C 295 350 270 380 200 380 Z" />
-        <path d="M200 360 C 120 360 120 290 160 240 C 180 215 180 200 175 180 C 205 215 235 210 235 175 C 250 215 275 250 275 295 C 275 340 250 360 200 360 Z" />
-        <path d="M200 335 C 145 335 150 290 175 255 C 190 235 195 220 192 205 C 210 225 230 220 228 200 C 240 230 255 260 255 295 C 255 325 235 335 200 335 Z" />
-        <path d="M200 305 C 175 305 175 285 185 270 C 195 255 197 245 200 235 C 207 250 217 255 215 240 C 220 260 225 280 220 295 C 215 305 210 305 200 305 Z" />
-        <circle cx="200" cy="290" r="3" fill="#C2521E" />
-      </g>
-      <g stroke="rgba(20,17,13,0.3)" stroke-width="0.4" fill="none" stroke-dasharray="2 4">
-        <circle cx="200" cy="200" r="195" />
-        <circle cx="200" cy="200" r="160" />
-        <line x1="0" y1="200" x2="400" y2="200" />
-        <line x1="200" y1="0" x2="200" y2="400" />
-      </g>
-      <text x="20" y="20" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(20,17,13,0.4)" letter-spacing="2">HNP / 001</text>
-      <text x="20" y="390" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(20,17,13,0.4)" letter-spacing="2">FLAME PROFILE</text>
-      <text x="320" y="390" font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(20,17,13,0.4)" letter-spacing="2">SCALE 1:1</text>
-    </svg>
-  </div>
-
   <div class="wrap" style="position: relative; z-index: 1;">
     <div class="hero-meta reveal">
       <div class="left">Representação Comercial — Cozinhas Profissionais</div>
